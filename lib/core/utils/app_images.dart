@@ -27,11 +27,15 @@ class Assets {
 
   /// Assets for assetsImagesMainLogo
   /// assets/Images/MainLogo.svg
-  static const String assetsImagesMainLogo = "assets/Images/MainLogo.svg";
+
 
   /// Assets for assetsImagesNotification
   /// assets/Images/Notification.svg
   static const String assetsImagesNotification = "assets/Images/Notification.svg";
+
+  /// Assets for assetsImagesOloha logo 1 1
+  /// assets/Images/oloha logo 1 1.svg
+  static const String assetsImagesOlohalogo  = "assets/Images/oloha logo 1 1.svg";
 
   /// Assets for assetsImagesShareAdventure
   /// assets/Images/ShareAdventure.svg
