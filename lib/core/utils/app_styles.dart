@@ -31,5 +31,11 @@ static TextStyle medium14Text = const TextStyle(
     color: Color(0xff171725),
     fontWeight: FontWeight.w500
   );
+  static TextStyle regular15Text = const TextStyle(
+    fontSize: 15,
+    fontFamily: 'Gilroy',
+    color: Color(0xff696974),
+    fontWeight: FontWeight.w400
+  );
 
 }

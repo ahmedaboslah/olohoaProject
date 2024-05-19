@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:olohaproject/features/AppView/presentation/app_view.dart';
+import 'package:olohaproject/core/utils/app_router.dart';
+
 
 void main() {
   runApp(const MainPage());
@@ -9,8 +10,10 @@ class MainPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: AppView(),
+    return  MaterialApp.router(
+      routerConfig: AppRouter.router,
+      debugShowCheckedModeBanner: false,
+      
     );
   }
 }

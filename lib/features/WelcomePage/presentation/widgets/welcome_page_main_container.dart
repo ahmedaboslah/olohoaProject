@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:olohaproject/constants.dart';
 import 'package:olohaproject/core/customWidgets/custom_button.dart';
 import 'package:olohaproject/core/utils/app_images.dart';
@@ -84,7 +85,9 @@ class WelcomePageMainContainer extends StatelessWidget {
                 SignInAndSignUpButton(
                   color: mainColor,
                   text: 'Sign in',
-                  onPressed: () {},
+                  onPressed: () {
+                    GoRouter.of(context).push('/sign_in_page');
+                  },
                 ),
                 const SizedBox(
                   width: 15,

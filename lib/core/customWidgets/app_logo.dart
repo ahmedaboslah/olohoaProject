@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_styles.dart';
+import '../utils/app_styles.dart';
 
 class AppLogo extends StatelessWidget {
   const AppLogo({super.key});
