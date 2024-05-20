@@ -5,8 +5,8 @@ import 'package:olohaproject/constants.dart';
 
 import '../../../../core/utils/app_styles.dart';
 
-class DontHaveAccountRow extends StatelessWidget {
-  const DontHaveAccountRow({
+class AlreadyHaveAccountRow extends StatelessWidget {
+  const AlreadyHaveAccountRow({
     super.key,
   });
 
@@ -16,16 +16,16 @@ class DontHaveAccountRow extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Don’t have an account? ',
+          'Already have an account? ',
           style: AppStyles.medium14Text
               .copyWith(color: const Color(0xff696974)),
         ),
         GestureDetector(
             onTap: () {
-              GoRouter.of(context).push('/sign_up_page');
+              GoRouter.of(context).push('/sign_in_page');
             },
             child: Text(
-              'Sign Up',
+              'Sign in',
               style: AppStyles.medium14Text.copyWith(color: mainColor),
             ))
       ],

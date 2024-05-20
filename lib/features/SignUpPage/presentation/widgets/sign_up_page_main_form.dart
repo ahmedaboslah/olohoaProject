@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:olohaproject/constants.dart';
 import 'package:olohaproject/core/customWidgets/custom_button.dart';
-import 'package:olohaproject/core/utils/app_images.dart';
 import 'package:olohaproject/core/utils/app_styles.dart';
-import 'package:olohaproject/features/SigninPage/presentation/widgets/Another_Account_Button.dart';
-import 'package:olohaproject/features/SigninPage/presentation/widgets/Dont_Have_Account_Row.dart';
+import 'package:olohaproject/features/SignUpPage/presentation/widgets/another_account_row_widget.dart';
+import 'package:olohaproject/features/SignUpPage/presentation/widgets/terms_and_condition.dart';
 import 'package:olohaproject/features/SigninPage/presentation/widgets/custom_password_text_field.dart';
 import 'package:olohaproject/features/SigninPage/presentation/widgets/custom_text_form_field.dart';
 
-class SignInPageMainForm extends StatelessWidget {
-  const SignInPageMainForm({
+import 'already_have_an_account.dart';
+
+class SignUpPageMainForm extends StatelessWidget {
+  const SignUpPageMainForm({
     super.key,
   });
 
@@ -24,7 +25,7 @@ class SignInPageMainForm extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
-            'Welcome Back',
+            'Register new account',
             style: AppStyles.semibold22Text,
           ),
           const SizedBox(
@@ -45,26 +46,27 @@ class SignInPageMainForm extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Align(
-              alignment: Alignment.centerRight,
-              child: Text(
-                'Forget Password?',
-                style: AppStyles.regular14Text,
-              )),
+          const CustomPasswordFormField(hintText: 'Email'),
+          const SizedBox(
+            height: 10,
+          ),
+          const CustomPasswordFormField(hintText: 'Phone number'),
+          const SizedBox(
+            height: 10,
+          ),
+          const TermsAndCondition(),
           const SizedBox(
             height: 20,
           ),
           CustomButton(
               bckcolor: mainColor,
-              onPressed: () {
-                
-              },
+              onPressed: () {},
               image: '',
-              text: 'Sign in'),
+              text: 'Sign up'),
           const SizedBox(
             height: 16,
           ),
-          const DontHaveAccountRow(),
+          const AlreadyHaveAccountRow(),
           const SizedBox(
             height: 17,
           ),
@@ -77,17 +79,7 @@ class SignInPageMainForm extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              AnotherAccountButton(
-                  color: blackButtonColor, image: Assets.assetsImagesAppleicon),
-              AnotherAccountButton(
-                  image: Assets.assetsImagesGoogle, color: redButtonColor),
-              AnotherAccountButton(
-                  image: Assets.assetsImagesFacebookF, color: blueButtonColor),
-            ],
-          )
+          const AnotherAccountsRowWidget()
         ]),
       ),
     );
