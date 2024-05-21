@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:olohaproject/constants.dart';
 
 import '../utils/app_styles.dart';
 
@@ -28,19 +29,20 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         child: image != ''
             ? ListTile(
+              titleAlignment: ListTileTitleAlignment.center,
                 contentPadding: EdgeInsets.symmetric(
                     horizontal: MediaQuery.of(context).size.width * .15),
                 leading: SvgPicture.asset(image),
                 title: Text(
                   text,
-                  style: AppStyles.semibold15Text,
+                  style:bckcolor==mainColor? AppStyles.semibold15Text.copyWith(color: Colors.white):AppStyles.semibold15Text,
                 ),
               )
             : ListTile(
                 title: Center(
                   child: Text(
                     text,
-                    style: AppStyles.semibold15Text,
+                    style:bckcolor==mainColor? AppStyles.semibold15Text.copyWith(color: Colors.white):AppStyles.semibold15Text,
                   ),
                 ),
               ));

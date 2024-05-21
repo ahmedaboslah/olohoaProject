@@ -37,5 +37,11 @@ static TextStyle medium14Text = const TextStyle(
     color: Color(0xff696974),
     fontWeight: FontWeight.w400
   );
+  static TextStyle semiBold24Text = const TextStyle(
+    fontSize: 24,
+    fontFamily: 'Gilroy',
+    color: Colors.black,
+    fontWeight: FontWeight.w600
+  );
 
 }

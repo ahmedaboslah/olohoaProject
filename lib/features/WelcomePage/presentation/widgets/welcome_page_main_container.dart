@@ -93,7 +93,9 @@ class WelcomePageMainContainer extends StatelessWidget {
                   width: 15,
                 ),
                 SignInAndSignUpButton(
-                    color: blackButtonColor, onPressed: () {}, text: 'Sign up'),
+                    color: blackButtonColor, onPressed: () {
+                      GoRouter.of(context).push('/sign_up_page');
+                    }, text: 'Sign up'),
               ],
             ),
           )

@@ -28,7 +28,7 @@ final Color color;
           onPressed: onPressed,
           child: Text(
             '$text',
-            style:color==blackButtonColor? AppStyles.semibold15Text.copyWith(color: Colors.white):AppStyles.semibold15Text,
+            style:color==mainColor? AppStyles.semibold15Text.copyWith(color: Colors.black):AppStyles.semibold15Text.copyWith(color: Colors.white),
           )),
     );
   }

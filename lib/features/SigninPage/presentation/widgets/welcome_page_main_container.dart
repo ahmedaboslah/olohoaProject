@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:olohaproject/constants.dart';
 import 'package:olohaproject/core/customWidgets/custom_button.dart';
 import 'package:olohaproject/core/utils/app_images.dart';
@@ -57,7 +58,7 @@ class SignInPageMainForm extends StatelessWidget {
           CustomButton(
               bckcolor: mainColor,
               onPressed: () {
-                
+                GoRouter.of(context).push('/Location');
               },
               image: '',
               text: 'Sign in'),
